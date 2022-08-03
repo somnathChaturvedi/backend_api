@@ -1,0 +1,16 @@
+service: serverless-tensorflow-endpoint
+
+frameworkVersion: "3.21.0"
+
+provider:
+  name: aws
+  stage: dev
+functions:
+  imageDetect:
+    handler: handler.getname
+    runtime: nodejs14.x
+    timeout: 20
+    events:
+      - http:
+          path: detect
+          method: post
