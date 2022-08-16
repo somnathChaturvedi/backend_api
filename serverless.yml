@@ -7,7 +7,7 @@ provider:
   stage: dev
 functions:
   imageDetect:
-    handler: handler.getname
+    handler: handler.lambdaHandler
     runtime: nodejs14.x
     timeout: 20
     events:
